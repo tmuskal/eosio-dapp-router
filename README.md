@@ -33,31 +33,31 @@ npx --no-install jsipfs add .\endpoints-mainnet.list
 ### Contract support for metadata
 Add the following code to your contract's class body:
 ```
-struct metadata { 
-  name    key; 
-  string  value; 
-  uint64_t primary_key() const { return key.value; } 
-}; 
-typedef eosio::multi_index<"meta"_n, metadata> _t_meta; 
-[[eosio::action]] 
-void setmeta(
-  name    key, 
-  string  value 
-){ 
-    require_auth(_self); 
-    _t_meta items( _self, _self.value ); 
-    auto existing = items.find( key.value ); 
-    if(existing == items.end()) { 
-        items.emplace(_self, [&]( auto& a ){ 
-              a.key = key; 
-              a.value = value; 
-        }); 
-    } else { 
-        items.modify( *existing, eosio::same_payer, [&]( auto& a ) { 
-              a.value = value; 
-        }); 
-    } 
-} 
+    TABLE meta { 
+        name key; 
+        std::string value; 
+        uint64_t primary_key() const { return key.value; } 
+    }; 
+    typedef eosio::multi_index<"meta"_n, meta> _t_meta; 
+    [[eosio::action]] 
+    void setmeta(
+        name key, 
+        std::string value 
+    ){ 
+        require_auth(_self); 
+        _t_meta items( _self, _self.value ); 
+        auto existing = items.find( key.value ); 
+        if(existing == items.end()) { 
+            items.emplace(_self, [&]( auto& a ){ 
+                a.key = key; 
+                a.value = value; 
+            }); 
+        } else { 
+            items.modify( *existing, eosio::same_payer, [&]( auto& a ) { 
+                a.value = value; 
+            }); 
+        } 
+    }       
 ```
 ### Call setmeta
 ```
