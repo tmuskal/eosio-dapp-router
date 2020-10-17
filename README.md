@@ -4,6 +4,9 @@ Generates a static page (to be hosted on IPFS) for redirecting to a dapp URL reg
 
 The script iterates over given endpoints (passed in the URL as an IPFS address) and compares the results, so there is no need to trust a specific eos node.
 
+
+[example redirect to here](https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
+
 ## Example use cases
 
 - Bookmark which redirects to a static DAO chosen frontend (content can also be hosted in IPFS)
@@ -16,7 +19,6 @@ The script iterates over given endpoints (passed in the URL as an IPFS address) 
 - Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
 
 - Main page hash: Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52
-[link to here](https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
 ## Project setup
 ```shell-script
