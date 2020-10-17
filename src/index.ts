@@ -35,24 +35,23 @@ async function load(){
     let appName = hashParams['name']; // autorediect if exists
     let endpointsHash = hashParams['endpoints']; // ipfshash  
     const ipfsPrefix = `/ipfs/`;
-    
-    // if(!endpointsHash){
-    //     endpointsHash = 'QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8';
-    // }
     const endpointsListResp = await fetch(ipfsPrefix + endpointsHash);
     const endpointsListText = await endpointsListResp.text();
     const enspointsList = endpointsListText.split('\n');
     const endpoints = enspointsList.map(endpoint=>new JsonRpc(`${window.location.protocol}//${endpoint}`, { fetch }));    
+    document.getElementById('endpointsContainer').innerHTML = enspointsList.join('<br/>');
+    document.getElementById('appname').innerHTML = appName;
+    
     // resolve metadata for appName from all endpoints
+    let message = 'Status: ';
     try{
-        const results = await Promise.all(endpoints.map(e=>loadFrom(e,appName)));        
-        document.write(`Resolving ${appName}:`);        
+        const results = await Promise.all(endpoints.map(e=>loadFrom(e,appName)));                
         const resultsHist = {};
         let topRes = null;
         let maxRes = 0;
         results.forEach(result => {            
             if(result){
-                document.write('.');
+                message += '.';
                 if(!resultsHist[result])
                     resultsHist[result] = 0;
                 
@@ -62,19 +61,21 @@ async function load(){
                 }
             }
             else{
-                document.write('x');
+                message += 'x';
             }
         });
-        document.writeln('<br/>');
+        message += `<br/>`;
         if(topRes){
+            message += `Redirecting to ${topRes}`;
             window.location.href = topRes;        
         }
         else {
-            document.writeln(`frontend metadata(frontend.url) for ${appName} is missing`);
+            message += `Frontend metadata(frontend.url) for ${appName} is missing`;
         }
+        document.getElementById('message').innerHTML = message;
     }
     catch(e){
-        document.writeln(`frontend metadata for ${appName} is missing`);
+        message += `Frontend metadata for ${appName} is missing`;        
     }
 }
 load().then(a=>{});

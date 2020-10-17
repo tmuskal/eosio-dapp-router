@@ -5,7 +5,7 @@ Generates a static page (to be hosted on IPFS) for redirecting to a dapp URL reg
 The script iterates over given endpoints (passed in the URL as an IPFS address) and compares the results, so there is no need to trust a specific eos node.
 
 
-[example redirect to here](https://cloudflare-ipfs.com/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
+[example redirect to here](https://cloudflare-ipfs.com/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
 ## Example use cases
 
@@ -41,9 +41,9 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+open browser at http://localhost:9090/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
-or https://cloudflare-ipfs.com/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+or https://cloudflare-ipfs.com/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
 ## Redeploy endpoint list
 ```shell-script
