@@ -1,5 +1,20 @@
 # eosio-dapp-router
-[link to here](https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8&name=cryptocoders)
+
+Generates a static page (to be hosted on IPFS) for redirecting to a dapp URL registered in the eosio contract metadata.
+
+The script iterates over given endpoints (passed in the URL as an IPFS address) and compares the results, so there is no need to trust a specific eos node.
+
+## Example use cases
+
+- Bookmark which redirects to a static DAO chosen frontend (content can also be hosted in IPFS)
+- Contract developers can declare the recommended ui for the contract
+- Website discovery without DNS
+
+
+Mainnet endpoints hash: QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB
+Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
+
+[link to here](https://cloudflare-ipfs.com/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
 ## Project setup
 ```shell-script
@@ -21,11 +36,10 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H?#endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8&name=yourapp
+open browser at http://localhost:9090/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
-or https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8&name=yourapp
+or https://cloudflare-ipfs.com/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
-or for kylin: https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?endpoints=QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1&name=yourapp
 ## Redeploy endpoint list
 ```shell-script
 npx --no-install jsipfs add .\endpoints-kylin.list
