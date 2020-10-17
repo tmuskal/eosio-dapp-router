@@ -19,11 +19,11 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H?#name=yourapp&endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8
+open browser at http://localhost:9090/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H?#endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8&name=yourapp
 
-or https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?name=yourapp&endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8
+or https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?endpoints=QmYCRZMziBHofYrd1NUTpJdecQxwdMLhZFZM5epoTfxTo8&name=yourapp
 
-or for kylin: https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?name=yourapp&endpoints=QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
+or for kylin: https://cloudflare-ipfs.com/ipfs/QmXf13DPX7ULuKpve3DU6KwZ37oMXFmCjhZG1LrctbfX4H/#?endpoints=QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1&name=yourapp
 ## Redeploy endpoint list
 ```shell-script
 npx --no-install jsipfs add .\endpoints-kylin.list
