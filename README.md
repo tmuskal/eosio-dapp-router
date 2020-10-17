@@ -10,9 +10,10 @@ The script iterates over given endpoints (passed in the URL as an IPFS address) 
 - Contract developers can declare the recommended ui for the contract
 - Website discovery without DNS
 
+## Endpoint Hashes
+- Mainnet endpoints hash: QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB
 
-Mainnet endpoints hash: QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB
-Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
+- Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
 
 [link to here](https://cloudflare-ipfs.com/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
