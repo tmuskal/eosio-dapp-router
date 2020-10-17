@@ -41,7 +41,7 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+open browser at http://localhost:9090/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
 or https://cloudflare-ipfs.com/ipfs/QmUuduj7gQozD57sjo1JmwbQifqpGxtGbQgRFSH1T41YoV/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
