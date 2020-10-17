@@ -46,11 +46,13 @@ async function load(){
     // resolve metadata for appName from all endpoints
     try{
         const results = await Promise.all(endpoints.map(e=>loadFrom(e,appName)));        
+        document.write(`Resolving ${appName}:`);        
         const resultsHist = {};
         let topRes = null;
         let maxRes = 0;
-        results.forEach(result => {
+        results.forEach(result => {            
             if(result){
+                document.write('.');
                 if(!resultsHist[result])
                     resultsHist[result] = 0;
                 
@@ -59,17 +61,20 @@ async function load(){
                     maxRes = resultsHist[result];
                 }
             }
+            else{
+                document.write('x');
+            }
         });
-        
+        document.writeln('<br/>');
         if(topRes){
             window.location.href = topRes;        
         }
         else {
-            alert(`frontend metadata(frontend.url) for ${appName} is missing`);
+            document.writeln(`frontend metadata(frontend.url) for ${appName} is missing`);
         }
     }
     catch(e){
-        alert(`frontend metadata for ${appName} is missing`);
+        document.writeln(`frontend metadata for ${appName} is missing`);
     }
 }
 load().then(a=>{});

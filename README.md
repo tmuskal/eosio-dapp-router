@@ -5,7 +5,7 @@ Generates a static page (to be hosted on IPFS) for redirecting to a dapp URL reg
 The script iterates over given endpoints (passed in the URL as an IPFS address) and compares the results, so there is no need to trust a specific eos node.
 
 
-[example redirect to here](https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
+[example redirect to here](https://cloudflare-ipfs.com/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
 ## Example use cases
 
@@ -14,7 +14,8 @@ The script iterates over given endpoints (passed in the URL as an IPFS address) 
 - Website discovery without DNS
 
 ## Hashes
-- Mainnet endpoints hash: QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB
+
+- Mainnet endpoints hash: QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2
 
 - Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
 
@@ -40,9 +41,9 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+open browser at http://localhost:9090/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
-or https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+or https://cloudflare-ipfs.com/ipfs/QmTfUGaVqXYgvzrAJpseZcNVyqKTitd7NkNF9XG19aAza2/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
 ## Redeploy endpoint list
 ```shell-script
