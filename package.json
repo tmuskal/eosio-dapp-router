@@ -1,0 +1,27 @@
+{
+  "name": "eosio-dapp-router",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Tal Muskal <tmuskal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eosjs": "^21.0.3"
+  },
+  "devDependencies": {
+    "core-js": "^3.6.5",
+    "typescript": "^4.0.3",
+    "@types/core-js": "^0.9.41",
+    "@types/node": "^7.0.23",
+    "html-webpack-plugin": "^4.5.0",
+    "ipfs": "^0.50.2",
+    "source-map-loader": "^1.1.1",
+    "ts-loader": "^8.0.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^4.0.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "deploy": "npm run build && npx --no-install jsipfs add -r dist",
+    "initipfs": "npx --no-install jsipfs init && npx --no-install jsipfs daemon"
+  }
+}
