@@ -15,11 +15,11 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                loader: "source-map-loader"
-            },
+            // {
+            //     enforce: 'pre',
+            //     test: /\.js$/,
+            //     loader: "source-map-loader"
+            // },
             {
                 test: /\.ts$/,
                 loader: 'ts-loader',
@@ -28,11 +28,9 @@ module.exports = {
         ]
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin(),
-        // new ExtractTextPlugin('styles.css'),
         new HtmlWebpackPlugin({
-            // template: 'src/index.html'
+            template: 'src/index.html'
         })
     ],
-    devtool: "source-map"
+    // devtool: "source-map"
 };

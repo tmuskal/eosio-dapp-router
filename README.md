@@ -10,12 +10,13 @@ The script iterates over given endpoints (passed in the URL as an IPFS address) 
 - Contract developers can declare the recommended ui for the contract
 - Website discovery without DNS
 
-## Endpoint Hashes
+## Hashes
 - Mainnet endpoints hash: QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB
 
 - Kylin endpoints hash: QmZEMyJANVnjSDB6ujQLMbNQ56U65SG8nzx78wQ2SnouS1
 
-[link to here](https://cloudflare-ipfs.com/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
+- Main page hash: Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52
+[link to here](https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=cryptocoders)
 
 ## Project setup
 ```shell-script
@@ -37,9 +38,9 @@ npm run initipfs
 ```shell-script
 npm run deploy
 ```
-open browser at http://localhost:9090/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+open browser at http://localhost:9090/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52?#endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
-or https://cloudflare-ipfs.com/ipfs/QmQKTi7QhYeLL9vmS6F4SYbBqX9q8Si6Q4abY3zgLf6K5v/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
+or https://cloudflare-ipfs.com/ipfs/Qma9Wvk8gnqmhDkNGNQiQNib2QH12LkdCeo9nJAtS59J52/#?endpoints=QmYzeayjNXdPxosFEYFDphMGwEzBX7s3vzK6sVaaECVxUB&name=yourapp
 
 ## Redeploy endpoint list
 ```shell-script
